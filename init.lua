@@ -4,7 +4,13 @@ return {
     {
       "Mofiqul/dracula.nvim",
       as = "dracula",
-      config = function() require("dracula").setup {} end,
+      config = function()
+        require("dracula").setup {
+          colors = {
+            bright_red = "#FFFFFF",
+          },
+        }
+      end,
     },
   },
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -17,7 +23,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true,     -- enable or disable format on save globally
+        enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
